@@ -68,3 +68,10 @@ a, button, label, [data-magnetic], [role="button"]{cursor:url("data:image/png;ba
 
 /* "currently vibing" live-dot pulse */
 @keyframes ab-pulse{0%{box-shadow:0 0 0 0 rgba(31,160,106,.5)}70%{box-shadow:0 0 0 11px rgba(31,160,106,0)}100%{box-shadow:0 0 0 0 rgba(31,160,106,0)}}
+
+/* Reduced motion: the js-anim gate already disables scroll reveals, but the
+   marquee, floating blob, pulse dot and letter-rise run from inline styles —
+   stop those too. */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{animation-duration:.01s !important; animation-iteration-count:1 !important; transition-duration:.01s !important;}
+}

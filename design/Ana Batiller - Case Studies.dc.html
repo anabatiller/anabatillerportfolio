@@ -30,7 +30,6 @@
   .ab-idx-status{margin-top:clamp(40px,7vw,110px); font:500 13px/1 'DM Mono',monospace; letter-spacing:.2em; text-transform:lowercase; color:var(--olive);}
   .ab-idx-status-sep{color:var(--sky);}
   .ab-idx-status-cat{color:var(--body);}
-  image-slot{display:block;}
 </style>
 <script>
   (function(){ try{ if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){ document.documentElement.classList.add('js-anim'); } }catch(e){} })();
@@ -61,7 +60,7 @@
       </div>
       <div data-reveal="" data-tilt="" style="transform-style:preserve-3d; position:relative; width:100%; aspect-ratio:1/1;">
         <span class="ab-aside" style="position:absolute; top:-14px; left:-10px; z-index:2; transform:rotate(-5deg);">(that's me, thinkin hard)</span>
-        <image-slot id="ab-portrait" shape="rounded" radius="26" fit="contain" placeholder="Drop your portrait" data-tilt-in="" style="position:absolute; inset:0; width:100%; height:100%; box-shadow:0 30px 60px -28px rgba(55,27,5,.35); display:block; border-radius:26px;"><img src="./img_9265-mquv4t2c.jpg" alt="img_9265" style="width: 100%; height: 100%; display: block; object-fit: cover; border-radius:26px;"></image-slot>
+        <image-slot id="ab-portrait" shape="rounded" radius="26" fit="cover" src="../images/ab-portrait.webp" placeholder="Drop your portrait" data-tilt-in="" style="position:absolute; inset:0; width:100%; height:100%; box-shadow:0 30px 60px -28px rgba(55,27,5,.35); display:block; border-radius:26px;"></image-slot>
       </div>
     </div>
   </header>

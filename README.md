@@ -57,7 +57,7 @@ Static site — no app state. Only needs: the shared `cases` data module, and pe
 ## Design Tokens
 (Full definitions in `design/tokens/*.css`; summary:)
 - **Colors**: page `#FFFEFA` (cream); ink `#371B05`; body `#5A4632`; accent periwinkle `#6E82DB`; hairline `#D2DDFB`; gold `#9E8D35`; tints `#EEF2FE` (sky) / `#F7F2E2` (olive); cursor glow only `#FB885B`. Case accents: `#4F63E3`, `#F2643C`, `#C98A2E`.
-- **Type**: Fraunces (variable serif, opsz 96–144, SOFT 50–90) for display — hero light 340 italic, project titles black 900 tight-tracked; DM Sans body 17–18px/1.75; DM Mono for every eyebrow/label/tagline/caption/stat-caption (13px, tracking .2em) and section `h3`s. All Google Fonts except `Palmios.woff2` (included; decorative, used in explorations).
+- **Type**: Palmios (local `design/Palmios.woff2`, via `--font-head`) for all `h1`–`h3` display headers — applied by a `base.css` override (lowercased, relaxed tracking), with Fraunces (variable serif, opsz 96–144, SOFT 50–90) as fallback; DM Sans body 17–18px/1.75; DM Mono for every eyebrow/label/tagline/caption/stat-caption (13px, tracking .2em) and all non-heading display text (stat numerals, index titles' inline styles). Fraunces, DM Sans, DM Mono load from Google Fonts.
 - **Spacing**: 1180px column; `clamp(56px,7vw,104px)` between sections; `clamp(24px,2.4vw,34px)` card padding.
 - **Radii**: 22px cards/media, 26px portrait, 14px thumbnails, 999px pills. **Hairlines**: `1.5px solid` periwinkle. **Shadow** (media only): `0 30px 60px -34px rgba(55,27,5,.30)`.
 - **Motif**: soft blurred accent dot (CSS circle + `filter:blur`) beside headlines/titles.
@@ -69,9 +69,9 @@ None. No icon fonts or SVG sets. The "icons" are the blurred dot, middot separat
 First person, plain, evidence-led ("I redesigned…"); numbers do the bragging. Sentence case; lowercase tracked mono eyebrows; middots in meta lines; em-dashes for asides; emoticons only in contact links; no emoji. All final copy is in the HTML files and `cases.js`.
 
 ## Assets
-- `design/Palmios.woff2` — local display font (explorations only).
+- `design/Palmios.woff2` — local display font for `h1`–`h3` headers (see `tokens/typography.css` + the `base.css` heading override). Confirm the webfont license covers self-hosting before going live.
 - Fraunces, DM Sans, DM Mono — load from Google Fonts.
-- `images/` — the final case-study photos/screenshots. Each filename matches the `id` of the `image-slot` element it belongs to in the HTML (e.g. `images/ab-podd-hero.webp` goes where `<image-slot id="ab-podd-hero">` sits); the slot's `placeholder` text describes the content. Replace each slot with a real `<img>` using these files.
+- `images/` — the final case-study photos/screenshots. Each filename matches the `id` of the `image-slot` element it belongs to in the HTML (e.g. `images/ab-podd-hero.webp` goes where `<image-slot id="ab-podd-hero">` sits), and each slot also carries a `src="../images/…"` fallback so the prototypes render the final imagery as-is. In the production build, replace each slot with a real `<img>` using these files.
 
 ## Files
 - `DESIGN_SYSTEM.md` — full design-system documentation (read first).

@@ -397,6 +397,12 @@
     }
 
     connectedCallback() {
+      // Inside a raw <x-dc> template this element is source markup, not UI —
+      // running there would bake state attributes (data-filled, data-editable)
+      // into the template the dc-runtime compiles, and React would later
+      // strip them from the live element when it re-diffs against the clean
+      // fetched source. Stay inert until actually rendered.
+      if (this.closest('x-dc')) return;
       // Warn once per page — an id-less slot works for the session but
       // cannot persist, and two id-less slots would share nothing.
       if (!this.id && !ImageSlot._warned) {
@@ -592,6 +598,11 @@
     }
 
     _render() {
+      // Defer until connected: parser-driven attributeChangedCallbacks fire
+      // before the element is appended (so the x-dc check below can't see the
+      // template yet), and connectedCallback re-runs _render anyway. Then stay
+      // inert inside the raw <x-dc> template (see connectedCallback).
+      if (!this.isConnected || this.closest('x-dc')) return;
       // Shape / mask. Presets use border-radius so the dashed ring can
       // follow the rounded outline; clip-path is only applied for an
       // explicit `mask` (the ring is hidden there since a rectangle

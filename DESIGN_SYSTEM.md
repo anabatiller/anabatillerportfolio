@@ -9,7 +9,7 @@ The visual + interaction system behind Ana Batiller's product-design portfolio. 
 - `motion.js` — **single source of truth** for all animation (reveal, tilt, magnetism, cursor glow, click-stamp, marquee, hero letters, index hover). Loaded in each page's helmet; each page's DC logic calls `window.ABMotion.initMotion(this.props)`.
 - `cases.js` — **single source of truth for case content metadata** (`num`, `href`, `cat`, `title`, `summary`). The homepage work index AND each case page's hero both read from here, so renaming a case or rewriting its summary updates both at once.
 - `Case Template.dc.html` — content-only starting point for a new case. Duplicate → fill placeholders → wrap stays in the shell.
-- `global-payments.dc.html`, `hybrid-credit-debit-card.dc.html`, `getlini-daritaji.dc.html` — case studies. Each is **content only** inside `Case Shell`.
+- `global-payments.dc.html`, `hybrid-credit-debit-card.dc.html`, `podd.dc.html` — case studies. Each is **content only** inside `Case Shell`.
 - `Ana Batiller - Portfolio.dc.html` — redirect into the landing.
 
 **Where to make a change once:** chrome (header/footer) → `Case Shell.dc.html` + `Site Footer.dc.html`; any animation behavior → `motion.js`; a case's number/title/category/summary → `cases.js` (updates the case hero + homepage row together); colors/type/spacing tokens → `tokens/*.css`. All of it propagates to every page.
@@ -34,7 +34,7 @@ The visual + interaction system behind Ana Batiller's product-design portfolio. 
 
 **Color.** Warm paper base — `--ab-cream #FFFEFA` page, `--ab-ink #371B05` near-black brown for headlines, `--ab-body #5A4632` clay-brown for prose. Two chromatic voices: cool periwinkle (`--ab-accent #6E82DB`, hairline `--ab-sky #D2DDFB`) and antique gold (`--ab-olive #9E8D35`). Cards sit on the palest tints of each — `--ab-sky-tint #EEF2FE` (cool) and `--ab-olive-tint #F7F2E2` (warm), alternated to give sections rhythm. A single clay-coral `--ab-cursor #FB885B` exists only as the blurred cursor glow (multiply blend) — never as fill or text.
 
-**Type.** Three families, strict roles. **Fraunces** (variable serif, `opsz` 96–144, `SOFT` 50–90) for all display — the hero wordmark runs light (340) and italic; project titles run black (900) with tight tracking. **DM Sans** for body copy at 17–18px / 1.75. **DM Mono** for every label, eyebrow, tagline, caption and stat-caption — usually 13px, tracked `.2em`, uppercase for eyebrows. The recently-updated section sub-headlines (`h3`) also use DM Mono for a more technical voice.
+**Type.** Strict roles. **Palmios** (local `Palmios.woff2`, via `--font-head`) for all display headers — `base.css` applies it to every `h1`–`h3` (lowercased, relaxed tracking), falling back to **Fraunces** (variable serif, `opsz` 96–144, `SOFT` 50–90) if it fails to load. Non-heading display text (stat numerals, eyebrows, taglines) stays in DM Mono. **DM Sans** for body copy at 17–18px / 1.75. **DM Mono** for every label, eyebrow, tagline, caption and stat-caption — usually 13px, tracked `.2em`, uppercase for eyebrows. (Headings carry inline `font-family:'DM Mono'` + Fraunces variation settings in the markup; the `base.css` `!important` override is what makes them render in Palmios.)
 
 **Layout.** Centered `max-width:1180px` column with fluid `clamp()` gutters. Generous vertical rhythm (`clamp(56px,7vw,104px)` between blocks). Editorial asymmetry: 1.15fr / .85fr hero, alternating image/text 1fr/1fr rows, 3-up card grids.
 
@@ -59,8 +59,7 @@ Effectively icon-free. There are **no icon fonts, no SVG icon sets**. "Icons" ar
 ## Index / manifest
 
 - `styles.css` — global entry point (link this).
-- `tokens/colors.css` · `tokens/typography.css` · `tokens/motion.css` — foundations.
-- `ds-cards/*.html` — foundation & component specimen cards (Design System tab).
-- `SKILL.md` — portable skill manifest.
+- `tokens/colors.css` · `tokens/typography.css` · `tokens/motion.css` · `tokens/compat.css` — foundations.
+- `base.css` — shared resets, motion classes, link treatment, scrapbook motifs.
 
-**To iterate:** specimen cards are the fastest place to tune a token and see it across the system.
+**To iterate:** tune a token in `tokens/*.css` and it propagates to every page.
