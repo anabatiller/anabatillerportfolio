@@ -71,7 +71,7 @@ First person, plain, evidence-led ("I redesigned…"); numbers do the bragging. 
 ## Assets
 - `design/Palmios.woff2` — local display font (explorations only).
 - Fraunces, DM Sans, DM Mono — load from Google Fonts.
-- Case-study photos/screenshots are user-supplied at runtime via drop slots in the prototypes; ask Ana for the final image exports (each `image-slot` `id` + `placeholder` text in the HTML says what goes where).
+- `images/` — the final case-study photos/screenshots. Each filename matches the `id` of the `image-slot` element it belongs to in the HTML (e.g. `images/ab-podd-hero.webp` goes where `<image-slot id="ab-podd-hero">` sits); the slot's `placeholder` text describes the content. Replace each slot with a real `<img>` using these files.
 
 ## Files
 - `DESIGN_SYSTEM.md` — full design-system documentation (read first).
@@ -85,3 +85,4 @@ First person, plain, evidence-led ("I redesigned…"); numbers do the bragging. 
 - `design/styles.css`, `design/base.css`, `design/tokens/` — global styles + token definitions.
 - `design/support.js` — prototype runtime (lets the `.dc.html` files open in a browser; not part of the design).
 - `design/Ana Batiller - Portfolio.dc.html` — redirect stub into the landing.
+- `images/` — final imagery, one file per image slot (named by slot id).
