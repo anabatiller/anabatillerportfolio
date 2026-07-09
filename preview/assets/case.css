@@ -1,0 +1,130 @@
+/* ============================================================
+   taste-skill PREVIEW — case-page layout vocabulary.
+   Sits on top of site.css (cursor, grain, reveals, ablink,
+   Palmios h1-h3 override, marquee/pulse keyframes all come from
+   there). This file only adds the redesigned structure.
+   Per-page accent is set via --accent on <body>.
+   ============================================================ */
+
+.cwrap{max-width:1100px; margin:0 auto; padding-left:clamp(24px,5vw,64px); padding-right:clamp(24px,5vw,64px);}
+.ceyebrow{font:500 13px/1 'DM Mono',monospace; letter-spacing:.2em; text-transform:lowercase; color:var(--body); margin:0;}
+
+/* ---- sticky nav: name (readable) + back-to-work ---- */
+.cnav{position:sticky; top:0; z-index:100; background:rgba(255,254,250,.82); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1.5px solid var(--sky);}
+.cnav-in{display:flex; align-items:center; justify-content:space-between; gap:20px; height:70px;}
+.cnav-mark{font-family:var(--font-head); font-size:clamp(24px,3vw,30px); line-height:1; text-transform:lowercase; letter-spacing:-.01em; color:var(--ink); text-decoration:none;}
+.cnav-mark:hover{color:var(--accent);}
+.cnav-back{display:inline-flex; align-items:center; gap:9px; font:500 15px/1 'DM Mono',monospace; color:var(--accent); text-decoration:none;}
+.cnav-back .d{width:15px; height:15px; border-radius:50%; background:var(--accent); filter:blur(6px); opacity:.85;}
+.cnav-back:hover{text-decoration:underline; text-underline-offset:4px;}
+
+/* ---- hero: asymmetric split ---- */
+.chero{padding-top:clamp(34px,5vw,64px); padding-bottom:clamp(8px,2vw,20px);}
+.chero-grid{display:grid; grid-template-columns:1.02fr .98fr; gap:clamp(32px,5vw,72px); align-items:center;}
+.chero-meta{display:flex; gap:16px; align-items:baseline; margin-bottom:22px;}
+.chero-meta .num{font:500 13px/1 'DM Mono',monospace; letter-spacing:.14em; color:var(--accent);}
+.chero-meta .cat{font:500 13px/1 'DM Mono',monospace; letter-spacing:.14em; text-transform:lowercase; color:var(--body);}
+.chero h1{margin:0; font-family:var(--font-head); font-size:clamp(42px,6vw,80px); line-height:.92; letter-spacing:-.02em;}
+.chero h1 .w{display:inline-block; white-space:nowrap;}  /* keep words unbroken while letters still split for hover */
+.chero.long h1{font-size:clamp(32px,4.6vw,58px); line-height:.98;}
+.chero h1 .dot{display:inline-block; width:.28em; height:.28em; border-radius:50%; background:var(--accent); filter:blur(5px); opacity:.9; margin-left:.1em; vertical-align:.14em;}
+.chero-tag{margin:clamp(20px,2.4vw,28px) 0 0; font:400 clamp(18px,1.9vw,22px)/1.5 'DM Mono',monospace; color:var(--ink); max-width:34ch;}
+.chero-media{width:100%; border-radius:24px; overflow:hidden; box-shadow:0 30px 60px -30px rgba(55,27,5,.35);}
+.chero-media img{display:block; width:100%; height:auto;}
+
+/* ---- generic section ---- */
+.csec{padding-top:clamp(48px,7vw,96px);}
+.csec-head{margin-bottom:clamp(24px,3vw,40px);}
+.csec-head .ceyebrow{margin-bottom:16px;}
+.csec-head h2{margin:0; font-family:var(--font-head); font-size:clamp(28px,4.2vw,52px); line-height:1; letter-spacing:-.02em; max-width:20ch;}
+.csec-lead{max-width:64ch; margin:0 0 clamp(24px,3vw,40px); font:400 18px/1.7 'DM Sans',sans-serif; color:var(--body);}
+
+/* ---- two-column intro text ---- */
+.ctwo{display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,64px);}
+.ctwo .lbl{font-family:var(--font-head); font-size:22px; margin:0 0 12px; text-transform:lowercase;}
+.ctwo p{margin:0; font:400 18px/1.75 'DM Sans',sans-serif; color:var(--body);}
+
+/* ---- insight / feature cards ---- */
+.ccards{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2vw,24px);}
+.ccards.two{grid-template-columns:1fr 1fr;}
+.ccard{border-radius:20px; padding:clamp(24px,2.4vw,34px);}
+.ccard.warm{background:var(--oliveTint);}
+.ccard.cool{background:var(--skyTint);}
+.ccard-num{font-family:var(--font-head); font-size:32px; color:var(--accent); line-height:1;}
+.ccard h3{margin:16px 0 12px; font-family:var(--font-head); font-size:22px; line-height:1.1; text-transform:lowercase;}
+.ccard p{margin:0; font:400 15.5px/1.65 'DM Sans',sans-serif; color:var(--body);}
+.ccard .tag{display:block; margin-top:14px; font:500 12px/1.4 'DM Mono',monospace; letter-spacing:.04em; color:var(--olive);}
+
+/* ---- split text + media ---- */
+.csplit{display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,64px); align-items:center;}
+.csplit.wide-left{grid-template-columns:1.1fr .9fr;}
+.csplit h3{margin:0 0 18px; font-family:var(--font-head); font-size:clamp(26px,3.4vw,42px); line-height:1.04; letter-spacing:-.02em; text-transform:lowercase;}
+.csplit p{margin:0 0 16px; font:400 17px/1.75 'DM Sans',sans-serif; color:var(--body);}
+.csplit p:last-child{margin-bottom:0;}
+.cmedia{border-radius:20px; overflow:hidden; box-shadow:0 22px 44px -30px rgba(55,27,5,.4);}
+.cmedia img{display:block; width:100%; height:auto;}
+.ccap{margin-top:12px; font:400 13px/1 'DM Mono',monospace; letter-spacing:.05em; color:var(--body); text-align:center;}
+
+/* ---- full-width media ---- */
+.cfull{border-radius:22px; overflow:hidden; box-shadow:0 24px 48px -32px rgba(55,27,5,.4);}
+.cfull img{display:block; width:100%; height:auto;}
+
+/* ---- stat row over a hairline ---- */
+.cstats{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,3vw,40px); border-top:1.5px solid var(--sky); padding-top:clamp(28px,3vw,40px);}
+.cstat .big{font-family:var(--font-head); font-size:clamp(44px,6vw,84px); line-height:.92; letter-spacing:-.02em;}
+.cstat.accent .big{color:var(--accent);}
+.cstat p{margin:10px 0 0; font:400 15px/1.55 'DM Mono',monospace; color:var(--body); max-width:26ch;}
+
+/* ---- accent callout (podd marketing) ---- */
+.ccallout{background:var(--accent); border-radius:24px; padding:clamp(32px,4vw,64px); color:#FDF9F0;}
+.ccallout .cin{display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(24px,4vw,56px); align-items:center;}
+.ccallout h3{margin:0; font-family:var(--font-head); font-size:clamp(28px,4.2vw,54px); line-height:1.02; letter-spacing:-.02em; color:#FDF9F0; text-transform:lowercase;}
+.ccallout p{margin:18px 0 0; max-width:48ch; font:400 17px/1.7 'DM Sans',sans-serif; color:rgba(253,249,240,.88);}
+.ccallout .line{font-family:var(--font-head); font-size:clamp(26px,3vw,42px); line-height:1.05; letter-spacing:-.02em; color:#FDF9F0; text-transform:lowercase; text-align:right;}
+.ccallout .sub{margin-top:12px; font:500 13px/1.6 'DM Mono',monospace; letter-spacing:.12em; text-transform:lowercase; color:rgba(253,249,240,.72); text-align:right;}
+
+/* ---- small stat quad (podd finance) ---- */
+.cquad{background:var(--skyTint); border-radius:20px; padding:clamp(24px,2.6vw,36px);}
+.cquad-grid{display:grid; grid-template-columns:1fr 1fr; gap:clamp(18px,2vw,28px);}
+.cquad .n{font-family:var(--font-head); font-size:clamp(32px,3.6vw,50px); line-height:.95; letter-spacing:-.02em; color:var(--accent);}
+.cquad .c{margin-top:8px; font:400 13.5px/1.5 'DM Mono',monospace; color:var(--body);}
+
+/* ---- pill scale plan ---- */
+.cpills{display:flex; flex-wrap:wrap; gap:clamp(12px,1.5vw,20px); align-items:center; font:500 13px/1.5 'DM Mono',monospace; letter-spacing:.06em; color:var(--body);}
+.cpills .h{color:var(--olive);}
+.cpills .pill{background:var(--oliveTint); border-radius:999px; padding:8px 16px;}
+
+/* ---- callout stat card (podd brand 58%) ---- */
+.cstatcard{background:var(--oliveTint); border-radius:20px; padding:clamp(28px,3vw,40px);}
+.cstatcard .n{font-family:var(--font-head); font-size:clamp(48px,6vw,72px); line-height:.9; letter-spacing:-.02em; color:var(--accent);}
+.cstatcard p{margin:14px 0 0; font:400 15.5px/1.65 'DM Sans',sans-serif; color:var(--body);}
+
+/* ---- team credit line ---- */
+.ccredit{margin-top:clamp(24px,3vw,36px); font:400 14px/1.7 'DM Mono',monospace; color:var(--body);}
+
+/* ---- footer ---- */
+.cfoot{margin-top:clamp(56px,8vw,120px); background:var(--ink); color:var(--cream); overflow:hidden;}
+.cfoot .mqw{padding:clamp(44px,6vw,96px) 0 clamp(18px,2.5vw,34px);}
+.cfoot [data-mq]{display:flex; width:max-content; white-space:nowrap; animation:ab-mq 34s linear infinite; will-change:transform;}
+.cfoot [data-mq] span{font-family:var(--font-head); font-weight:500; font-size:clamp(38px,7vw,98px); letter-spacing:-.01em; text-transform:lowercase; padding-right:.4em;}
+.cfoot-in{display:flex; gap:36px; flex-wrap:wrap; align-items:center; justify-content:space-between; padding-top:clamp(30px,4vw,52px); padding-bottom:clamp(44px,6vw,84px);}
+.cfoot-links{display:flex; gap:32px; flex-wrap:wrap;}
+.cfoot .ablink{color:var(--sky);}
+.cfoot-credit{font:400 13px/1.6 'DM Mono',monospace; letter-spacing:.05em; color:rgba(255,254,250,.5); text-align:right;}
+
+/* preview ribbon */
+.ribbon{background:var(--oliveTint); border-bottom:1px solid var(--sky); color:var(--body); font:500 12px/1.4 'DM Mono',monospace; letter-spacing:.04em; text-align:center; padding:9px 16px; text-transform:lowercase;}
+.ribbon a{color:var(--accent);}
+
+@media (max-width:860px){
+  .chero-grid{grid-template-columns:1fr; gap:32px;}
+  .chero-media{max-width:520px;}
+  .ctwo{grid-template-columns:1fr; gap:22px;}
+  .ccards, .ccards.two{grid-template-columns:1fr;}
+  .csplit, .csplit.wide-left{grid-template-columns:1fr; gap:26px;}
+  .cstats{grid-template-columns:1fr; gap:28px;}
+  .ccallout .cin{grid-template-columns:1fr; gap:24px;}
+  .ccallout .line, .ccallout .sub{text-align:left;}
+  .cfoot-in{flex-direction:column; align-items:flex-start;}
+  .cfoot-credit{text-align:left;}
+}
