@@ -14,111 +14,124 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
 <link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/case.css">
 <script>(function(){try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js-anim');}}catch(e){}})();</script>
 </head>
-<body>
-<div style="font-family:'DM Sans',sans-serif; position:relative; --accent:#4F63E3;">
+<body style="font-family:'DM Sans',sans-serif; position:relative; --accent:#4F63E3;">
 
-  <header style="max-width:1180px; margin:0 auto; padding:clamp(28px,5vw,56px) clamp(24px,5vw,64px) 0;">
-    <a class="ablink" data-magnetic="" href="../" style="display:inline-flex; align-items:center; gap:9px;"><span aria-hidden="true" style="width:17px; height:17px; border-radius:50%; background:var(--accent); filter:blur(6px); opacity:.85;"></span>back to work</a>
+
+<nav class="cnav">
+  <div class="cwrap cnav-in">
+    <a class="cnav-mark" href="../">ana batiller</a>
+    <a class="cnav-back" href="../"><span class="d" aria-hidden="true"></span>back to work</a>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <header class="chero cwrap">
+    <div class="chero-grid">
+      <div>
+        <div class="chero-meta" data-reveal><span class="num">01</span><span class="cat">fintech · gcash</span></div>
+        <div class="ab-wordmark" data-reveal><h1><span class="w">GCash</span> <span class="w">Global</span><span class="dot" aria-hidden="true"></span></h1></div>
+        <p class="chero-tag" data-reveal>Redesigned the GCash Global Payments experience, driving overseas usage from 5% to 80%+</p>
+      </div>
+      <div class="chero-media" data-reveal data-tilt><img src="../images/ab-gp-hero.webp" alt="GCash Global Payments — wallet home and QR payment screens" data-tilt-in></div>
+    </div>
   </header>
 
-  <section id="ab-case-01" style="max-width:1180px; margin:0 auto; padding:clamp(24px,4vw,56px) clamp(24px,5vw,64px) 0;">
-    <div class="ab-rule-top" style="padding-top:clamp(40px,4vw,58px);">
-      <div data-reveal="" style="display:flex; gap:18px; align-items:baseline; font:500 13px/1 'DM Mono',monospace; letter-spacing:.2em; text-transform:lowercase; color:var(--olive); margin-bottom:24px;"><span>01</span><span style="color:var(--body);">Fintech · GCash</span></div>
-      <div data-mask="" style="display:inline-block;">
-        <h1 data-line="" data-wordmark="" style="margin:0; font-family:'DM Mono',monospace; font-variation-settings:'opsz' 144,'SOFT' 60; font-weight:500; font-size:clamp(36px,6vw,84px); line-height:.9; letter-spacing:-.03em;">GCash Global<span aria-hidden="true" style="display:inline-block; width:.34em; height:.34em; border-radius:50%; background:var(--accent); filter:blur(5px); opacity:.9; margin-left:.12em; vertical-align:.16em;"></span></h1>
+  <!-- CHALLENGE / APPROACH -->
+  <section class="csec cwrap">
+    <div class="ctwo">
+      <div data-reveal>
+        <div class="lbl">the challenge</div>
+        <p>GCash had a working global-payments product, but less than 5% of travelling users touched it. The problem wasn't the product, it was the experience. It was buried inside the app, offered no real-time exchange rates, and gave users no reason to trust it over cash.</p>
       </div>
-      <p data-reveal="" style="margin:24px 0 0; font:400 clamp(19px,2vw,24px)/1.5 'DM Mono',monospace; color:var(--ink);">Redesigned the GCash Global Payments experience, driving overseas usage from 5% to 80%+</p>
-    </div>
-
-    <div class="ab-grid-2" data-reveal="" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,64px); margin-top:clamp(40px,5vw,72px);">
-      <p style="margin:0; font:400 18px/1.75 'DM Sans',sans-serif; color:var(--body);">GCash had a working global-payments product, but less than 5% of travelling users touched it. The problem wasn't the product, it was the experience. It was buried inside the app, offered no real-time exchange rates, and gave users no reason to trust it over cash.</p>
-      <p style="margin:0; font:400 18px/1.75 'DM Sans',sans-serif; color:var(--body);">My job was to redesign this, turning a feature into something travellers would actually reach for. The challenge: make users feel financially in control the moment they land in a foreign country, before they even reach a cashier.</p>
-    </div>
-
-    <div data-reveal="" data-tilt="" style="margin-top:clamp(40px,5vw,72px); transform-style:preserve-3d;">
-      <img class="ab-half-img" src="../images/ab-gp-hero.webp" alt="GCash Global Payments — wallet home and QR payment screens" data-tilt-in="" style="display:block; width:50%; height:auto; margin:0 auto; border-radius:22px;">
-    </div>
-
-    <!-- problems -->
-    <div style="margin-top:clamp(56px,7vw,104px);">
-      <div data-reveal="" style="font:500 13px/1 'DM Mono',monospace; letter-spacing:.2em; text-transform:lowercase; color:var(--olive); margin-bottom:16px;">Previous experience</div>
-      <div data-mask="" style="margin-bottom:clamp(28px,3vw,44px);"><h3 data-line="" style="margin:0; font-family:'DM Mono',monospace; font-weight:500; font-size:clamp(30px,4.5vw,56px); letter-spacing:-.02em;">What was not working?</h3></div>
-      <div class="ab-cards ab-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2vw,24px);">
-        <div data-reveal="" data-tilt="" style="background:var(--oliveTint); border-radius:22px; padding:clamp(24px,2.4vw,34px); transform-style:preserve-3d;">
-          <div style="font-family:'DM Mono',monospace; font-variation-settings:'SOFT' 80; font-weight:500; font-size:34px; color:var(--olive); line-height:1;">01</div>
-          <div style="margin:16px 0 12px; font-family:'DM Mono',monospace; font-variation-settings:'opsz' 60,'SOFT' 60; font-weight:500; font-size:23px;">Poor visibility</div>
-          <p style="margin:0; font:400 15.5px/1.65 'DM Sans',sans-serif; color:var(--body);">The feature was buried four taps deep, and 70% of GCash users who'd travelled overseas had never even heard of it. The live Alipay+ partnership covered 50+ countries, but most of GCash's own users didn't know it existed.</p>
-        </div>
-        <div data-reveal="" data-tilt="" style="background:var(--oliveTint); border-radius:22px; padding:clamp(24px,2.4vw,34px); transition-delay:.08s; transform-style:preserve-3d;">
-          <div style="font-family:'DM Mono',monospace; font-variation-settings:'SOFT' 80; font-weight:500; font-size:34px; color:var(--olive); line-height:1;">02</div>
-          <div style="margin:16px 0 12px; font-family:'DM Mono',monospace; font-variation-settings:'opsz' 60,'SOFT' 60; font-weight:500; font-size:23px;">Unclear designs</div>
-          <p style="margin:0; font:400 15.5px/1.65 'DM Sans',sans-serif; color:var(--body);">Even users who found the feature didn't know what to do with it. No in-app instructions, no store locator, no way to tell which merchants accepted it, just a link to a help-center article. This friction killed user adoption right at the point of use.</p>
-        </div>
-        <div data-reveal="" data-tilt="" style="background:var(--oliveTint); border-radius:22px; padding:clamp(24px,2.4vw,34px); transition-delay:.16s; transform-style:preserve-3d;">
-          <div style="font-family:'DM Mono',monospace; font-variation-settings:'SOFT' 80; font-weight:500; font-size:34px; color:var(--olive); line-height:1;">03</div>
-          <div style="margin:16px 0 12px; font-family:'DM Mono',monospace; font-variation-settings:'opsz' 60,'SOFT' 60; font-weight:500; font-size:23px;">Lack of information</div>
-          <p style="margin:0; font:400 15.5px/1.65 'DM Sans',sans-serif; color:var(--body);">Zero-fee forex was GCash's key selling point, yet users never saw the exchange rate until after they'd already paid. The app couldn't detect location either, so it showed nothing at checkout, leaving people anxious at the cashier instead of confident.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- solution 1 -->
-    <div class="ab-grid-2" style="margin-top:clamp(56px,7vw,104px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,64px); align-items:center;">
-      <div>
-        <div data-reveal="" style="font:500 13px/1 'DM Mono',monospace; letter-spacing:.2em; text-transform:lowercase; color:var(--olive); margin-bottom:16px;">Solution</div>
-        <div data-mask="" style="margin-bottom:22px;"><h3 data-line="" style="margin:0; font-family:'DM Mono',monospace; font-weight:500; font-size:clamp(28px,3.6vw,46px); line-height:1.02; letter-spacing:-.02em;">Meet users before they even open the app</h3></div>
-        <p data-reveal="" style="margin:0 0 16px; font:400 17px/1.75 'DM Sans',sans-serif; color:var(--body);">Discovery couldn't start inside the app. Users who didn't know the feature existed would never go looking for it. So I designed touchpoints that reached them before they even travelled.</p>
-        <p data-reveal="" style="margin:0 0 16px; font:400 17px/1.75 'DM Sans',sans-serif; color:var(--body);">I surfaced the top 5 destinations for Filipino travellers (Japan, Singapore, South Korea, Italy, Germany) directly inside the QR scanner, the highest-traffic screen in the app. Informative without being disruptive, so awareness builds naturally while people are just paying for everyday things at home.</p>
-        <p data-reveal="" style="margin:0; font:400 17px/1.75 'DM Sans',sans-serif; color:var(--body);">The in-app experience worked alongside physical touchpoints too: geofenced push notifications near the airport, and large-format ads in the international departure terminal, reinforcing the message right at the moment people were actually about to travel.</p>
-      </div>
-      <div data-reveal="" data-tilt="" style="transform-style:preserve-3d;">
-        <img class="ab-half-img" src="../images/ab-gp-discovery.webp" alt="QR scanner screen surfacing top travel destinations" data-tilt-in="" style="display:block; width:60%; height:auto; margin-left:10px; margin-right:10px; border-radius:22px;">
-      </div>
-    </div>
-
-    <!-- solution 2 -->
-    <div class="ab-grid-2" style="margin-top:clamp(40px,5vw,72px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,64px); align-items:center;">
-      <div data-reveal="" data-tilt="" style="order:0; transform-style:preserve-3d;">
-        <img class="ab-half-img" src="../images/ab-gp-overseas.webp" alt="Overseas dashboard showing converted balance and QR payment" data-tilt-in="" style="display:block; width:60%; height:auto; margin-left:auto; border-radius:22px;">
-      </div>
-      <div>
-        <div data-mask="" style="margin-bottom:22px;"><h3 data-line="" style="margin:0; font-family:'DM Mono',monospace; font-weight:500; font-size:clamp(28px,3.6vw,46px); line-height:1.02; letter-spacing:-.02em;">Confidence the moment you're overseas</h3></div>
-        <p data-reveal="" style="margin:0 0 16px; font:400 17px/1.75 'DM Sans',sans-serif; color:var(--body);">Once abroad, the goal was to make spending power visible at a glance. I pushed the converted balance onto the dashboard, so users see what they can actually spend in local currency the moment they open the app.</p>
-        <p data-reveal="" style="margin:0; font:400 17px/1.75 'DM Sans',sans-serif; color:var(--body);">I also redesigned the QR scanner to show the live exchange rate and accepted-merchant logos at a glance, giving users the confirmation they need before reaching the cashier, not after. This turned a feature people couldn't find or trust into something they could actually rely on mid-trip.</p>
-      </div>
-    </div>
-
-    <!-- results -->
-    <div style="margin-top:clamp(56px,7vw,104px);">
-      <div data-reveal="" style="font:500 13px/1 'DM Mono',monospace; letter-spacing:.2em; text-transform:lowercase; color:var(--accent); margin-bottom:16px;">Results</div>
-      <div class="ab-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,3vw,40px); padding-top:clamp(20px,2.2vw,28px);">
-        <div data-reveal=""><div style="font-family:'DM Mono',monospace; font-variation-settings:'opsz' 144,'SOFT' 50; font-weight:500; font-size:clamp(40px,5vw,72px); line-height:.92;">80%+</div><p style="margin:10px 0 0; font:400 15px/1.6 'DM Sans',sans-serif; color:var(--body);">of overseas-travelling users adopted it post-launch — up from under 5%, with the product infrastructure unchanged.</p></div>
-        <div data-reveal="" style="transition-delay:.08s;"><div style="font-family:'DM Mono',monospace; font-variation-settings:'opsz' 144,'SOFT' 50; font-weight:500; font-size:clamp(40px,5vw,72px); line-height:.92;">4</div><p style="margin:10px 0 0; font:400 15px/1.6 'DM Sans',sans-serif; color:var(--body);">markets — SG, JP, FR, UK — saw measurable rises in feature awareness and transaction volume from the airport campaign.</p></div>
-        <div data-reveal="" style="transition-delay:.16s;"><div style="font-family:'DM Mono',monospace; font-variation-settings:'opsz' 144,'SOFT' 50; font-weight:500; font-size:clamp(40px,5vw,72px); line-height:.92;">&lt;2mo</div><p style="margin:10px 0 0; font:400 15px/1.6 'DM Sans',sans-serif; color:var(--body);">from pitch to live product: coordinating design, product, engineering, marketing, and the Alipay+ partnership.</p></div>
+      <div data-reveal>
+        <div class="lbl">my job</div>
+        <p>My job was to redesign this, turning a feature into something travellers would actually reach for. The challenge: make users feel financially in control the moment they land in a foreign country, before they even reach a cashier.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============================== FOOTER ============================== -->
-  <footer style="margin-top:clamp(64px,9vw,140px); background:var(--ink); color:var(--cream); overflow:hidden;">
-    <div style="padding:clamp(48px,7vw,104px) 0 clamp(20px,3vw,40px);">
-      <div data-mq="" data-base="34" aria-hidden="true" style="display:flex; width:max-content; white-space:nowrap; animation:ab-mq 34s linear infinite; will-change:transform;">
-        <span style="font-family:var(--font-head); font-weight:500; font-size:clamp(38px,7.2vw,102px); letter-spacing:-.01em; text-transform:lowercase; padding-right:.4em;">thank you! · get in touch · thank you! · get in touch · </span>
-        <span style="font-family:var(--font-head); font-weight:500; font-size:clamp(38px,7.2vw,102px); letter-spacing:-.01em; text-transform:lowercase; padding-right:.4em;">thank you! · get in touch · thank you! · get in touch · </span>
+  <!-- PROBLEMS -->
+  <section class="csec cwrap">
+    <div class="csec-head">
+      <p class="ceyebrow" data-reveal>previous experience</p>
+      <h2 data-reveal>What was not working?</h2>
+    </div>
+    <div class="ccards" data-reveal>
+      <div class="ccard warm">
+        <div class="ccard-num">01</div>
+        <h3>Poor visibility</h3>
+        <p>The feature was buried four taps deep, and 70% of GCash users who'd travelled overseas had never even heard of it. The live Alipay+ partnership covered 50+ countries, but most of GCash's own users didn't know it existed.</p>
+      </div>
+      <div class="ccard warm">
+        <div class="ccard-num">02</div>
+        <h3>Unclear designs</h3>
+        <p>Even users who found the feature didn't know what to do with it. No in-app instructions, no store locator, no way to tell which merchants accepted it, just a link to a help-center article. This friction killed user adoption right at the point of use.</p>
+      </div>
+      <div class="ccard warm">
+        <div class="ccard-num">03</div>
+        <h3>Lack of information</h3>
+        <p>Zero-fee forex was GCash's key selling point, yet users never saw the exchange rate until after they'd already paid. The app couldn't detect location either, so it showed nothing at checkout, leaving people anxious at the cashier instead of confident.</p>
       </div>
     </div>
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(32px,4vw,56px) clamp(24px,5vw,64px) clamp(48px,6vw,88px); display:flex; gap:36px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-      <div style="display:flex; gap:32px; flex-wrap:wrap;">
-        <a class="ablink" data-magnetic="" href="mailto:anabatillerr@gmail.com" style="color:var(--sky); display:inline-flex; align-items:center; gap:9px;"><span aria-hidden="true" style="width:17px; height:17px; border-radius:50%; background:var(--sky); filter:blur(6px); opacity:.95;"></span>email me :-)</a>
-        <a class="ablink" data-magnetic="" href="https://www.linkedin.com/in/anapatriciabatiller/" target="_blank" rel="noopener" style="color:var(--sky); display:inline-flex; align-items:center; gap:9px;"><span aria-hidden="true" style="width:17px; height:17px; border-radius:50%; background:var(--sky); filter:blur(6px); opacity:.95;"></span>connect with me :-D</a>
-      </div>
-      <div style="font:400 13px/1.6 'DM Mono',monospace; letter-spacing:.05em; color:rgba(255,254,250,.5); text-align:right;">Ana Batiller · 2026</div>
-    </div>
-  </footer>
+  </section>
 
-</div>
+  <!-- SOLUTION 1 -->
+  <section class="csec cwrap">
+    <div class="csplit">
+      <div data-reveal>
+        <p class="ceyebrow" style="margin-bottom:16px;">solution</p>
+        <h3>Meet users before they even open the app</h3>
+        <p>Discovery couldn't start inside the app. Users who didn't know the feature existed would never go looking for it. So I designed touchpoints that reached them before they even travelled.</p>
+        <p>I surfaced the top 5 destinations for Filipino travellers (Japan, Singapore, South Korea, Italy, Germany) directly inside the QR scanner, the highest-traffic screen in the app. Informative without being disruptive, so awareness builds naturally while people are just paying for everyday things at home.</p>
+        <p>The in-app experience worked alongside physical touchpoints too: geofenced push notifications near the airport, and large-format ads in the international departure terminal, reinforcing the message right at the moment people were actually about to travel.</p>
+      </div>
+      <div class="cmedia" data-reveal data-tilt><img src="../images/ab-gp-discovery.webp" alt="QR scanner screen surfacing top travel destinations" data-tilt-in></div>
+    </div>
+  </section>
+
+  <!-- SOLUTION 2 -->
+  <section class="csec cwrap">
+    <div class="csplit">
+      <div class="cmedia" data-reveal data-tilt><img src="../images/ab-gp-overseas.webp" alt="Overseas dashboard showing converted balance and QR payment" data-tilt-in></div>
+      <div data-reveal>
+        <h3>Confidence the moment you're overseas</h3>
+        <p>Once abroad, the goal was to make spending power visible at a glance. I pushed the converted balance onto the dashboard, so users see what they can actually spend in local currency the moment they open the app.</p>
+        <p>I also redesigned the QR scanner to show the live exchange rate and accepted-merchant logos at a glance, giving users the confirmation they need before reaching the cashier, not after. This turned a feature people couldn't find or trust into something they could actually rely on mid-trip.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="csec cwrap">
+    <div class="csec-head"><p class="ceyebrow" data-reveal style="color:var(--accent);">results</p></div>
+    <div class="cstats" data-reveal>
+      <div class="cstat accent"><div class="big">80%+</div><p>of overseas-travelling users adopted it post-launch — up from under 5%, with the product infrastructure unchanged.</p></div>
+      <div class="cstat"><div class="big">4</div><p>markets — SG, JP, FR, UK — saw measurable rises in feature awareness and transaction volume from the airport campaign.</p></div>
+      <div class="cstat"><div class="big">&lt;2mo</div><p>from pitch to live product: coordinating design, product, engineering, marketing, and the Alipay+ partnership.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="cfoot">
+  <div class="mqw">
+    <div data-mq data-base="34" aria-hidden="true">
+      <span>thank you! · get in touch · thank you! · get in touch · </span>
+      <span>thank you! · get in touch · thank you! · get in touch · </span>
+    </div>
+  </div>
+  <div class="cwrap cfoot-in">
+    <div class="cfoot-links">
+      <a class="ablink" data-magnetic href="mailto:anabatillerr@gmail.com">email me :-)</a>
+      <a class="ablink" data-magnetic href="https://www.linkedin.com/in/anapatriciabatiller/" target="_blank" rel="noopener">connect with me :-D</a>
+    </div>
+    <div class="cfoot-credit">Ana Batiller · 2026</div>
+  </div>
+</footer>
+
 <script src="../assets/motion.js"></script>
 <script>window.ABMotion.initMotion({accent:'#4F63E3'});</script>
 </body>
